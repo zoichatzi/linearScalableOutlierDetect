@@ -1,5 +1,4 @@
 # Scalable Outlier Detection in Spark
-Scalable Outlier Detection in Spark
 
 ## Authors
 
@@ -18,14 +17,14 @@ Scalable Outlier Detection in Spark
 
 [4. Performance](https://github.com/zoichatzi/linearScalableOutlierDetect#4-performance)
 
-[5. Refferences](https://github.com/zoichatzi/linearScalableOutlierDetect#5-references)
+[5. References](https://github.com/zoichatzi/linearScalableOutlierDetect#5-references)
 
 
 ## 0. Introduction
 
 The goal of the present work is to discover abnormalities in two-dimensional data using linear complexity clustering techniques as a foundation. The solution performs effectively and effi-ciently in datasets with well-formed cycloid clusters. The solution has been implemented in Apache Spark using Scala.
 
-*The present work is a project that was created in the context of “Technologies for Big Data Analytics” class.*
+*The present work is a project that was created in the context of “TMINING FROM MASSIVE DATASETS” class.*
 
 **MSc Data and Web Science**, School of Informatics, Aristotle University of Thessaloniki.
 
@@ -51,7 +50,7 @@ Comparison between all approaches.
 | ----------------------- | -------- |---------------|---------------|-------------- |
 | Original (All)          | `47.000` | `0.000`       | `0.000`       |`0.000`        |
 | Original (50%)          | `23.500` | `0.000`       | `0.000`       |`0.000`        |
-| Original (25%)          | `11.750  | `0.000`       | `0.000`       |`0.000`        |
+| Original (25%)          | `11.750` | `0.000`       | `0.000`       |`0.000`        |
 | basic5                  | `4.000`  | `0.000`       | `0.000`       |`0.000`        |
 | outliers                | `876`    | `0.000`       | `0.000`       |`0.000`        |
 | face                    | `1.273`  | `0.000`       | `0.000`       |`0.000`        |
