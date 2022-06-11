@@ -8,17 +8,17 @@ Scalable Outlier Detection in Spark
 
 ## Table of Contents
 
-[0. Introduction](link)
+[0. Introduction](https://github.com/zoichatzi/linearScalableOutlierDetect#0-introduction)
 
-[1. The Problem](link)
+[1. The Problem](https://github.com/zoichatzi/linearScalableOutlierDetect#1-the-problem)
 
-[2. The Data](link)
+[2. The Data](https://github.com/zoichatzi/linearScalableOutlierDetect#2-the-data)
 
-[3. About Our Approach](link)
+[3. About Our Approach](https://github.com/zoichatzi/linearScalableOutlierDetect#3-about-our-approach)
 
-[4. Performance](link)
+[4. Performance](https://github.com/zoichatzi/linearScalableOutlierDetect#4-performance)
 
-[5. Refferences](link)
+[5. Refferences](https://github.com/zoichatzi/linearScalableOutlierDetect#5-references)
 
 
 ## 0. Introduction
@@ -26,7 +26,8 @@ Scalable Outlier Detection in Spark
 The goal of the present work is to discover abnormalities in two-dimensional data using linear complexity clustering techniques as a foundation. The solution performs effectively and effi-ciently in datasets with well-formed cycloid clusters. The solution has been implemented in Apache Spark using Scala.
 
 *The present work is a project that was created in the context of “Technologies for Big Data Analytics” class.*
-MSc Data and Web Science, School of Informatics, Aristotle University of Thessaloniki.
+
+**MSc Data and Web Science**, School of Informatics, Aristotle University of Thessaloniki.
 
 
 
@@ -42,21 +43,21 @@ MSc Data and Web Science, School of Informatics, Aristotle University of Thessal
 
 
 
-## 4. Performance of the Models
+## 4. Performance
 
 Comparison between all approaches.
 
 | Dataset	          | # points | Presision     | Recall        | Runtime (sec)|
 | ----------------------- | -------- |---------------|---------------|-------------- |
-| Original (All)          | ``       | `0.000`       | `0.000`       |`0.000`        |
-| Original (50%)          | ``       | `0.000`       | `0.000`       |`0.000`        |
-| Original (25%)          | ``       | `0.000`       | `0.000`       |`0.000`        |
-| basic5                  | ``       | `0.000`       | `0.000`       |`0.000`        |
-| outliers                | ``       | `0.000`       | `0.048`       |`0.000`        |
-| face                    | ``       | `0.000`       | `0.000`       |`0.000`        |
+| Original (All)          | `47.000` | `0.000`       | `0.000`       |`0.000`        |
+| Original (50%)          | `23.500` | `0.000`       | `0.000`       |`0.000`        |
+| Original (25%)          | `11.750  | `0.000`       | `0.000`       |`0.000`        |
+| basic5                  | `4.000`  | `0.000`       | `0.000`       |`0.000`        |
+| outliers                | `876`    | `0.000`       | `0.000`       |`0.000`        |
+| face                    | `1.273`  | `0.000`       | `0.000`       |`0.000`        |
 
 
-## 5. Refferences
+## 5. References
 
 
 
