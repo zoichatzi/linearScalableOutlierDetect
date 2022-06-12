@@ -1,0 +1,103 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""/tmp/idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""/tmp/idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.4.2 (Ubuntu Java 11.0.11)
+[debug]       Load.loadUnit: plugins took 344.347297ms
+[debug]       Load.loadUnit: defsScala took 0.227625ms
+[debug] [Loading] Scanning directory /home/ozzy/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/ozzy/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 88.967047 ms
+[debug]           Load.resolveProject(global-plugins) took 1050.281873ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /home/ozzy/.sbt/1.0/plugins, plugins: List(<none>))) took 1204.906753ms
+[debug] [Loading] Done in /home/ozzy/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 1265.700079ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.272156ms
+[debug]     Load.loadUnit(file:/home/ozzy/.sbt/1.0/plugins/, ...) took 1654.730341ms
+[debug]   Load.apply: load took 2039.90139ms
+[debug]   Load.apply: resolveProjects took 8.57788ms
+[debug]   Load.apply: finalTransforms took 114.302603ms
+[debug]   Load.apply: config.delegates took 12.645052ms
+[debug]   Load.apply: Def.make(settings)... took 1870.059284ms
+[debug]   Load.apply: structureIndex took 526.040544ms
+[debug]   Load.apply: mkStreams took 1.146687ms
+[info] loading global plugins from /home/ozzy/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 18760.66582ms
+[debug]           Load.loadUnit: plugins took 73.55398ms
+[debug]           Load.loadUnit: defsScala took 0.002889ms
+[debug] [Loading] Scanning directory /home/ozzy/IdeaProjects/test/project
+[debug]             Load.loadUnit: mkEval took 386.716319ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/ozzy/IdeaProjects/test/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 4.883933 ms
+[info] loading settings for project test-build from idea.sbt ...
+[debug]               Load.resolveProject(test-build) took 13.079404ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id test-build, base: /home/ozzy/IdeaProjects/test/project, plugins: List(<none>))) took 24.685417ms
+[debug] [Loading] Done in /home/ozzy/IdeaProjects/test/project, returning: (test-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 9822.984662ms
+[debug]           Load.loadUnit: cleanEvalClasses took 12.67107ms
+[debug]         Load.loadUnit(file:/home/ozzy/IdeaProjects/test/project/, ...) took 9913.861185ms
+[debug]       Load.apply: load took 9916.46073ms
+[debug]       Load.apply: resolveProjects took 0.072591ms
+[debug]       Load.apply: finalTransforms took 26.273693ms
+[debug]       Load.apply: config.delegates took 0.2748ms
+[debug]       Load.apply: Def.make(settings)... took 258.67137ms
+[debug]       Load.apply: structureIndex took 61.627135ms
+[debug]       Load.apply: mkStreams took 0.00352ms
+[info] loading project definition from /home/ozzy/IdeaProjects/test/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 15710.728049ms
+[debug]     Load.loadUnit: defsScala took 0.001784ms
+[debug] [Loading] Scanning directory /home/ozzy/IdeaProjects/test
+[debug]       Load.loadUnit: mkEval took 0.145872ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/ozzy/IdeaProjects/test, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin))), Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))), Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin)))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 7.487572 ms
+[info] loading settings for project test from build.sbt ...
+[debug]         Load.resolveProject(test) took 130.228484ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id test, base: /home/ozzy/IdeaProjects/test, plugins: List(<none>))) took 146.65088ms
+[debug] [Loading] Done in /home/ozzy/IdeaProjects/test, returning: (test)
+[debug]     Load.loadUnit: loadedProjectsRaw took 4242.243237ms
+[debug]     Load.loadUnit: cleanEvalClasses took 5.413314ms
+[debug]   Load.loadUnit(file:/home/ozzy/IdeaProjects/test/, ...) took 19968.843495ms
+[debug] Load.apply: load took 19979.133492ms
+[debug] Load.apply: resolveProjects took 0.090627ms
+[debug] Load.apply: finalTransforms took 80.8084ms
+[debug] Load.apply: config.delegates took 0.247555ms
+[debug] Load.apply: Def.make(settings)... took 440.902993ms
+[debug] Load.apply: structureIndex took 56.517276ms
+[debug] Load.apply: mkStreams took 0.002979ms
+[info] set current project to demo (in build file:/home/ozzy/IdeaProjects/test/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 40867 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 40867, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by Compile / compile, Test / compile
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by 
+[debug] 	Compile / compile
+[debug] 	Test / compile
+[info] Reapplying settings...
+[info] set current project to demo (in build file:/home/ozzy/IdeaProjects/test/)
+[debug] > Exec(idea-shell, None, None)
