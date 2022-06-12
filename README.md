@@ -2,7 +2,7 @@
 
 ## Authors
 
-- Maria Christina Manioy [@mcmaniou](https://github.com/mcmaniou)
+- Maria Christina Maniou [@mcmaniou](https://github.com/mcmaniou)
 - Zoi Chatzichristodoulou [@zoichatzi](https://github.com/zoichatzi)
 
 ## Table of Contents
