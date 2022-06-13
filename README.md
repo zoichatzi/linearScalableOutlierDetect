@@ -46,16 +46,15 @@ The goal of the present work is to discover abnormalities in two-dimensional dat
 
 Comparison between all approaches.
 
-| Dataset	          | # points | Presision     | Recall        | Runtime (sec)|
+| Dataset	                | # points | Presision     | Recall        | Runtime (sec) |
 | ----------------------- | -------- |---------------|---------------|-------------- |
-| Original (400%)          | `188.000` | `1`       | `1`        |`73.020051405`        |
-| Original (200%)          | `94.000` |`1`        | `1`        |`49.346912155`        |
-| Original (All)          | `47.000` | `1`        | `1`        |`42.109486233`        |
-| Original (50%)          | `23.500` | `1`        | `1`        |`35.566625094`        |
-| Original (25%)          | `11.750` |`1`        | `1`        |`32.941732741`        |
-| basic5                  | `4.000`  | `0.000`       | `0.000`       |`0.000`        |
-| outliers                | `876`    | `0.000`       | `0.000`       |`0.000`        |
-| face                    | `1.273`  | `0.000`       | `0.000`       |`0.000`        |
+| Original (400%)         | `188.000`| `1`           | `1`           |`73.020051405` |
+| Original (200%)         | `94.000` | `1`           | `1`           |`49.346912155` |
+| Original (All)          | `47.000` | `1`           | `1`           |`42.109486233` |
+| Original (50%)          | `23.500` | `1`           | `1`           |`35.566625094` |
+| Original (25%)          | `11.750` | `1`           | `1`           |`32.941732741` |
+| outliers                | `876`    | `0.6428`      | `1.000`       |`0.000`        |
+
 
 
 ## 5. References
