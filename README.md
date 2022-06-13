@@ -1,5 +1,7 @@
 # Scalable Outlier Detection in Spark
 
+![image](https://user-images.githubusercontent.com/94535853/173430719-f8c3b4bc-b093-473a-b3ba-43b61f448eb3.png)
+
 ## Authors
 
 - Maria Christina Maniou [@mcmaniou](https://github.com/mcmaniou)
