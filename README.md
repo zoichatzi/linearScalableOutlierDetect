@@ -93,8 +93,11 @@ Comparison between all approaches.
 ## 5. References
 
 [1] Rettig, L., Khayati, M., Cudré-Mauroux, P., Pior-kówski, M. (2019). Online Anomaly Detection over Big Data Streams. In: Braschler, M., Stadelmann, T., Stockinger, K. (eds) Applied Data Science. Springer, Cham. https://doi.org/10.1007/978-3-030-11821-1_16
+
 [2] MacQueen, J. B. (1967). Some methods for classifi-cation and analysis of multivariate observations. In L. M. Le Cam & J. Neyman (Eds.), Proceedings of the fifth Berkeley symposium on mathematical statistics and probability (Vol. 1, pp. 281–297). California: Uni-versity of California Press.
+
 [3] Lloyd, S. P. (1957). Least squares quantization in PCM. Technical Report RR-5497, Bell Lab, September 1957.
+
 [4] Bradley PS, Fayyad UM, Reina C (1998) Scaling clustering algorithms to large databases. In: KDD, pp 9–15
 
 
