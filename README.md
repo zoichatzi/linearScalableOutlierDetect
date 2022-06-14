@@ -42,6 +42,7 @@ In this work we present the implementation of a scala-ble approach of cluster-ba
 ## 2. The Data
 
 The **original dataset** D consists of approximately 47.000 non-negative two-dimension points that form six well-formed convex polygons as Figure 1 depicts.
+
 ![image](https://user-images.githubusercontent.com/94535853/173532966-edc95b0c-1e1f-426b-b456-d13f89a66362.png)
 
 In order to check the scalability of the run time of our approach the need to test it to subsets and supersets of the original data set came up. In particular, the perfor-mance of our method will be tested in two different categories where random points have been removed or added respectively. The sets will constitute:
@@ -51,6 +52,7 @@ In order to check the scalability of the run time of our approach the need to te
 -	Four times the original (400%)
 
 In order to examine the functionality of the present algorithm in a different set and simultaneously to ex-amine the performance of this approach in terms of accuracy and recall, we will test it in a dataset for which we know the grand truth. This set consists of 876 items which are divided into 2 clusters (pink and purple). The dataset has 9 pre-marked ectopic points which are marked in blue-green color as Figure depicts.
+
 ![image](https://user-images.githubusercontent.com/94535853/173533234-0a520aa9-5ede-4c68-b833-4f77a25e94d9.png)
 
 As the data are synthetic there was no need for extensive **pre-processing** of the data. There fore the bellow steps were followed:
