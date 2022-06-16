@@ -21,7 +21,7 @@
 
 [5. References](https://github.com/zoichatzi/linearScalableOutlierDetect#5-references)
 
-[6. TODO](https://github.com/zoichatzi/linearScalableOutlierDetect/blob/main/README.md#todo))
+[6. TODO](https://github.com/zoichatzi/linearScalableOutlierDetect/blob/main/README.md#todo)
 
 
 ## 0. Introduction
