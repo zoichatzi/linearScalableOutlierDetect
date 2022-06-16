@@ -100,5 +100,10 @@ Comparison between all approaches.
 
 [4] Bradley PS, Fayyad UM, Reina C (1998) Scaling clustering algorithms to large databases. In: KDD, pp 9–15
 
+## TODO
+[ ]  Account for streaming data.
+[X] Streaming data approach suggestions.
+[ ] Optimize # of clusters selection.
+[ ] Check on sparse data with outliers micro-clusters
 
 
