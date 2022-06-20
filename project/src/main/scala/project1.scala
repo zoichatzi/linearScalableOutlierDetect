@@ -21,7 +21,7 @@ object project1 {
     val sampleDF = sparkSession.read
       .option("header", "false")
       .option("inferSchema", "true")
-      .csv("/home/ozzy/Documents/data-example2122-pms.txt")
+      .csv("/home/ozzy/Documents/data-example2122-pms.txt") //"/home/ozzy/Documents/data-example2122-pms.txt"
 
     // Drop from dataframe the na
     val cleanDF = sampleDF.na.drop()
@@ -53,6 +53,38 @@ object project1 {
     // Make predictions
     val predictedDF = model.transform(scaledDF)
 
+    val sizesDF = model.summary.clusterSizes.zipWithIndex.filter( _._1 < 5).map(_._2)
+
+    import org.apache.spark.sql.functions.col
+
+    val microClustersDF = predictedDF.filter(col("prediction").isin(sizesDF: _*))
+
+    // A UDF to convert VectorUDT to ArrayType
+    val vecToArray = udf((xs: linalg.Vector) => xs.toArray)
+
+    val unscaleValue = udf((scaled: Double, minVal: Double, maxVal: Double) => (scaled * (maxVal - minVal)) + minVal)
+
+    if (microClustersDF.count() > 0) {
+
+      // Add a ArrayType Column
+      val featuresDF = microClustersDF.withColumn("featuresArr", vecToArray($"features")).select("featuresArr")
+
+      // Reverse minmax scaling and print outliers in console
+      featuresDF
+        .withColumn("x",
+          round(unscaleValue($"featuresArr".getItem(0),
+            lit(scalerModel.originalMin.apply(0)),
+            lit(scalerModel.originalMax.apply(0))), 3))
+        .withColumn("y",
+          round(unscaleValue($"featuresArr".getItem(1),
+            lit(scalerModel.originalMin.apply(1)),
+            lit(scalerModel.originalMax.apply(1))), 3))
+        .select("x", "y")
+        .show()
+    }
+
+    val mcIds = microClustersDF.select("prediction").collect.map(_.getInt(0))
+
     import org.apache.spark.ml.linalg.{Vector, Vectors}
 
     // UDF that calculates for each point distance from each cluster center
@@ -63,7 +95,7 @@ object project1 {
 
     // For each cluster calculate mean and std of its distances
     val metricsDF = distancesDF.groupBy($"prediction").agg(avg($"distanceFromCenter"), stddev($"distanceFromCenter"))
-    val arrayFor = metricsDF.select($"prediction").collect.map(_.getInt(0))
+    val arrayFor = metricsDF.select($"prediction").collect.map(_.getInt(0)).diff(mcIds)
     val avgFor = metricsDF.select($"avg(distanceFromCenter)").collect.map(_.getDouble(0))
     val stdevFor = metricsDF.select($"stddev_samp(distanceFromCenter)").collect.map(_.getDouble(0))
 
@@ -79,24 +111,23 @@ object project1 {
       if (outliersDF.count() > 0) {
 
         // A UDF to convert VectorUDT to ArrayType
-        val vecToArray = udf((xs: linalg.Vector) => xs.toArray)
+        //val vecToArray = udf((xs: linalg.Vector) => xs.toArray)
 
         // Add a ArrayType Column
-        val featuresDF = outliersDF.withColumn("featuresArr", vecToArray($"features")).select("featuresArr")
+        val featDF = outliersDF.withColumn("featuresArr", vecToArray($"features")).select("featuresArr")
 
         // Reverse minmax scaling and print outliers in console
-        featuresDF
+        featDF
           .withColumn("x",
-            round($"featuresArr".getItem(0) * (scalerModel.originalMax.apply(0) - scalerModel.originalMin.apply(0)) + scalerModel.originalMin.apply(0),
-              3))
+            round(unscaleValue($"featuresArr".getItem(0),
+              lit(scalerModel.originalMin.apply(0)),
+              lit(scalerModel.originalMax.apply(0))), 3))
           .withColumn("y",
-            round($"featuresArr".getItem(1) * (scalerModel.originalMax.apply(1) - scalerModel.originalMin.apply(1)) + scalerModel.originalMin.apply(1),
-              3))
+            round(unscaleValue($"featuresArr".getItem(1),
+              lit(scalerModel.originalMin.apply(1)),
+              lit(scalerModel.originalMax.apply(1))), 3))
           .select("x", "y")
           .show()
-
-        //.select("x", "y").write.mode(SaveMode.Overwrite)
-        //.csv("/home/ozzy/Documents/outliers.csv")
 
       }
       counter = counter + 1
@@ -104,5 +135,6 @@ object project1 {
 
     print("Execution time in seconds: ")
     print((System.nanoTime - t1) / 1e9d)
+
   }
 }
